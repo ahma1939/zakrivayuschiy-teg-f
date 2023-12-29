@@ -10,12 +10,17 @@
     "lint": "stylelint \"**/*.css\"",
     "lintfix": "stylelint \"**/*.css\" --fix",
     "checkAll": "npm run check && npm run lint",
-    "fixAll": "npm run format && npm run lintfix"
+    "fixAll": "npm run format && npm run lintfix",
+    "atomize": "atomizer -o ./dist/output.css --watch index.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "atomizer": "^3.28.0",
     "prettier": "^3.1.1",
     "stylelint": "^16.1.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
   }
 }
