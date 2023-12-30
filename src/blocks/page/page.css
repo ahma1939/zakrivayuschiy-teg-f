@@ -1,0 +1,8 @@
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: var(--page-main-font, 'Inter', sans-serif);
+    font-weight: var(--page-main-weight, 400);
+    min-inline-size: 320px;
+    min-block-size: 100dvb;
+  }
+}
