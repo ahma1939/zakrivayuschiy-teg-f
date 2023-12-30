@@ -1,22 +1,30 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-
   /* colors  */
---green-color: #00CC14;
---white-color: #FFF;
---black-color: #000;
+  --green-color: #00cc14;
+  --white-color: #fff;
+  --black-color: #000;
 
-/* text  */
---page-main-font: 'Inter', sans-serif;
---page-main-weight: 400;
---dark-theme-text-weight: 465;
---dark-theme-title-weight: 785;
+  /* text  */
+  --page-main-font: 'Inter', sans-serif;
+  --page-main-weight: 400;
+  --dark-theme-text-weight: 465;
+  --dark-theme-title-weight: 785;
 
-/* text-color  */
---text-color: var(--green-color, #00CC14);
+  /* text-color  */
+  --text-color: var(--green-color, #00cc14);
 
-/* background  */
---background-color: var(--black-color, #000);
-
-
+  /* background  */
+  --background-color: var(--black-color, #000);
+  --background-cover: repeating-linear-gradient(
+      to right,
+      var(--black-color, #000) 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--black-color, #000) 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(to bottom, #007f0c, #004306);
 }
