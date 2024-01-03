@@ -1,0 +1,9 @@
+.header {
+  font-family: var(--page-second-font, 'PressStart2P', sans-serif);
+  margin-block: 100px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
