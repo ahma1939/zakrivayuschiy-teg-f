@@ -1,6 +1,6 @@
 .card {
   max-inline-size: 696px;
-  margin-inline: 0 auto;
+  margin-inline: auto;
   border: 2px solid var(--green-color, #00CC14);
-  background: var(--black-color, #000);
+  background: var(--background-color, #000);
 }
