@@ -9,8 +9,9 @@
   --page-main-font: 'Inter', sans-serif;
   --page-second-font: 'PressStart2P', sans-serif;
   --page-main-weight: 400;
-  --dark-theme-text-weight: 465;
-  --dark-theme-title-weight: 785;
+  --page-header-weight: 785;
+  --page-text-weight: 465;
+
 
   /* text-color  */
   --text-color: var(--green-color, #00cc14);

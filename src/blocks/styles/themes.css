@@ -6,8 +6,6 @@
 */
 :root.theme-light {
   /* text  */
-  --page-text-weight: 400;
-  --light-theme-title-weight: 700;
 
   /* text-color  */
   --text-color: var(--black-color, #000);
@@ -26,8 +24,8 @@
 :root.theme-dark {
   /* text  */
   --page-main-weight: 400;
-  --dark-theme-text-weight: 465;
-  --dark-theme-title-weight: 785;
+  --page-header-weight: 785;
+  --page-text-weight: 465;
 
   /* text-color  */
   --text-color: var(--green-color, #00cc14);
@@ -50,8 +48,6 @@
 @media (prefers-color-scheme: light) {
   :root {
     /* text  */
-    --page-text-weight: 400;
-    --light-theme-title-weight: 700;
 
     /* text-color  */
     --text-color: var(--black-color, #000);

@@ -3,4 +3,21 @@
   border: none;
   background: transparent;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible {
+
+}
+
+.theme-menu__button:active {
+
 }
