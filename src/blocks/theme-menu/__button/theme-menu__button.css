@@ -2,8 +2,8 @@
   font-size: 14px;
   border: none;
   background: transparent;
-  text-transform: uppercase;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .theme-menu__button:hover {
