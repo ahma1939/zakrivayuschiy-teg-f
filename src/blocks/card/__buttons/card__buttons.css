@@ -1,6 +1,6 @@
 .card__buttons {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 6px;
-  margin: 25px 25px 25px;
+  margin: 25px;
 }

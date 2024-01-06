@@ -5,6 +5,6 @@
   background-image: var(--background-cover), none;
   background-size: cover;
   font-family: var(--page-main-font, 'Inter', sans-serif);
-  font-variation-settings: "wght" var(--page-main-weight, 400);
+  font-variation-settings: 'wght' var(--page-main-weight, 400);
   color: var(--text-color, #00cc14);
 }
