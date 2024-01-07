@@ -12,7 +12,7 @@
     "checkAll": "npm run check && npm run lint",
     "fixAll": "npm run format && npm run lintfix",
     "build": "gulp build",
-    "dev": "gulp",
+    "dev": "npm run build && gulp",
     "fixAndBuild": "npm run fixAll && npm run build",
     "lintfixAndPush": "npm run fixAll && git add . && git commit -m 'подготовили к публикации' && git push"
   },
