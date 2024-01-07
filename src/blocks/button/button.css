@@ -1,5 +1,5 @@
 .button {
-  font-family: var(--page-second-font, 'PressStart2P', sans-serif);
+  font-family: var(--page-second-font, "PressStart2P", sans-serif);
   border: 2px solid var(--green-color, #00cc14);
   background: transparent;
   font-size: 14px;

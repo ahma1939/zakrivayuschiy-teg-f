@@ -6,8 +6,8 @@
   --black-color: #000;
 
   /* text  */
-  --page-main-font: 'Inter', sans-serif;
-  --page-second-font: 'PressStart2P', sans-serif;
+  --page-main-font: "Inter", sans-serif;
+  --page-second-font: "PressStart2P", sans-serif;
   --page-main-weight: 400;
   --page-header-weight: 785;
   --page-text-weight: 465;

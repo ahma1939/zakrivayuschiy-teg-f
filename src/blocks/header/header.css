@@ -1,5 +1,5 @@
 .header {
-  font-family: var(--page-second-font, 'PressStart2P', sans-serif);
+  font-family: var(--page-second-font, "PressStart2P", sans-serif);
   margin-block: 100px;
   display: grid;
   justify-content: center;
