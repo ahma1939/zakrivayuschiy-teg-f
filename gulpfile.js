@@ -11,14 +11,6 @@ const htmlMinify = require("html-minifier");
 const gulpPug = require("gulp-pug");
 const sass = require("gulp-sass")(require("sass"));
 
-function serve() {
-  browserSync.init({
-    server: {
-      baseDir: "./dist",
-    },
-  });
-}
-
 function layoutsScss() {
   const plugins = [autoprefixer(), mediaquery(), cssnano()];
   return (
@@ -26,7 +18,7 @@ function layoutsScss() {
       .src("src/layouts/**/*.scss")
       .pipe(sass())
       .pipe(concat("bundle.css"))
-      // .pipe(postcss(plugins))
+      .pipe(postcss(plugins))
       .pipe(gulp.dest("dist/"))
       .pipe(browserSync.reload({ stream: true }))
   );
@@ -38,7 +30,7 @@ function pagesScss() {
     gulp
       .src("src/pages/**/*.scss")
       .pipe(sass())
-      // .pipe(postcss(plugins))
+      .pipe(postcss(plugins))
       .pipe(gulp.dest("dist/"))
       .pipe(browserSync.reload({ stream: true }))
   );
@@ -64,25 +56,29 @@ function html() {
     removeStyleLinkTypeAttributes: true,
     sortClassName: true,
     useShortDoctype: true,
-    collapseWhitespace: true,
-    minifyCSS: true,
+    collapseWhitespace: false,
+    minifyCSS: false,
     keepClosingSlash: true,
   };
   return gulp
     .src("src/**/*.html")
+    .on('data', function (file) {
+      const buferFile = Buffer.from(htmlMinify.minify(file.contents.toString(), options))
+      return file.contents = buferFile
+    })
     .pipe(plumber())
     .pipe(gulp.dest("dist/"))
     .pipe(browserSync.reload({ stream: true }));
 }
 
 function css() {
-  const plugins = [autoprefixer(), mediaquery(), cssnano()];
+  const plugins = [autoprefixer(), mediaquery(), cssnano({ preset: 'default', minify: false })];
   return (
     gulp
       .src("src/**/*.css")
       .pipe(plumber())
       .pipe(concat("bundle.css"))
-      // .pipe(postcss(plugins))
+      .pipe(postcss(plugins))
       .pipe(gulp.dest("dist/"))
       .pipe(browserSync.reload({ stream: true }))
   );
@@ -91,7 +87,6 @@ function css() {
 function images() {
   return gulp
     .src("src/images/**/*.{jpg,png,svg,gif,ico,webp,avif}")
-    .pipe(gulp.dest("dist/images"))
     .pipe(gulp.dest("dist/images"))
     .pipe(browserSync.reload({ stream: true }));
 }
@@ -115,6 +110,14 @@ function clean() {
   return del("dist");
 }
 
+async function serve() {
+  browserSync.init({
+    server: {
+      baseDir: "./dist",
+    },
+  });
+}
+
 function watchFiles() {
   gulp.watch(["src/**/*.pug"], pug);
   gulp.watch(["src/**/*.html"], html);
@@ -130,7 +133,7 @@ const build = gulp.series(
   clean,
   gulp.parallel(html, css, pug, layoutsScss, pagesScss, images, fonts, js)
 );
-const watchapp = gulp.parallel(build, watchFiles, serve);
+const watchapp = gulp.series(build, gulp.parallel(watchFiles, serve));
 
 exports.html = html;
 exports.pug = pug;
