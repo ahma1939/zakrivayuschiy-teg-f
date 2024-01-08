@@ -1,6 +1,6 @@
 .card__title {
   font-size: 18px;
   font-variation-settings: "wght" var(--page-header-weight, 785);
-  border-block-end: 2px solid var(--green-color, #00cc14);
+  border-block-end: 2px solid var(--border-color, #00cc14);
   padding: 4px 10px;
 }

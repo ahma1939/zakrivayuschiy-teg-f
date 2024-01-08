@@ -12,28 +12,24 @@ const gulpPug = require("gulp-pug");
 const sass = require("gulp-sass")(require("sass"));
 
 function layoutsScss() {
-  const plugins = [autoprefixer(), mediaquery(), cssnano()];
-  return (
-    gulp
-      .src("src/layouts/**/*.scss")
-      .pipe(sass())
-      .pipe(concat("bundle.css"))
-      .pipe(postcss(plugins))
-      .pipe(gulp.dest("dist/"))
-      .pipe(browserSync.reload({ stream: true }))
-  );
+  const plugins = [autoprefixer(), mediaquery()];
+  return gulp
+    .src("src/layouts/**/*.scss")
+    .pipe(sass())
+    .pipe(concat("bundle.css"))
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest("dist/"))
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 function pagesScss() {
-  const plugins = [autoprefixer(), mediaquery(), cssnano()];
-  return (
-    gulp
-      .src("src/pages/**/*.scss")
-      .pipe(sass())
-      .pipe(postcss(plugins))
-      .pipe(gulp.dest("dist/"))
-      .pipe(browserSync.reload({ stream: true }))
-  );
+  const plugins = [autoprefixer(), mediaquery()];
+  return gulp
+    .src("src/pages/**/*.scss")
+    .pipe(sass())
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest("dist/"))
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 function pug() {
@@ -62,9 +58,11 @@ function html() {
   };
   return gulp
     .src("src/**/*.html")
-    .on('data', function (file) {
-      const buferFile = Buffer.from(htmlMinify.minify(file.contents.toString(), options))
-      return file.contents = buferFile
+    .on("data", function (file) {
+      const buferFile = Buffer.from(
+        htmlMinify.minify(file.contents.toString(), options)
+      );
+      return (file.contents = buferFile);
     })
     .pipe(plumber())
     .pipe(gulp.dest("dist/"))
@@ -72,16 +70,14 @@ function html() {
 }
 
 function css() {
-  const plugins = [autoprefixer(), mediaquery(), cssnano({ preset: 'default', minify: false })];
-  return (
-    gulp
-      .src("src/**/*.css")
-      .pipe(plumber())
-      .pipe(concat("bundle.css"))
-      .pipe(postcss(plugins))
-      .pipe(gulp.dest("dist/"))
-      .pipe(browserSync.reload({ stream: true }))
-  );
+  const plugins = [autoprefixer(), mediaquery()];
+  return gulp
+    .src("src/**/*.css")
+    .pipe(plumber())
+    .pipe(concat("bundle.css"))
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest("dist/"))
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 function images() {

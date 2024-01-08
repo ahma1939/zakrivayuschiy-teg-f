@@ -28,4 +28,7 @@
       transparent 2px 4px
     ),
     linear-gradient(to bottom, #007f0c, #004306);
+
+  /* border */
+  --border-color: var(--green-color, #00cc14);
 }
