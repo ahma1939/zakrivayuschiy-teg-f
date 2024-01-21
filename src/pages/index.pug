@@ -1,7 +1,7 @@
 extends ../layouts/default
 
 block variables
-  - var title = "Закрывающий тег"
+  - var title = "Закрывающий тег";
   -
     var cardsContent = [
       {
@@ -28,14 +28,7 @@ block content
       block items
         li.list__item
           include ../blocks/card/card
-          +card(
-            cardsContent[0].title, 
-            cardsContent[0].imgSrc, 
-            cardsContent[0].textP1, 
-            cardsContent[0].textP2, 
-            cardsContent[0].iconPath,
-            cardsContent[0].likeText
-          )
+          +card(cardsContent[0].title, cardsContent[0].imgSrc, cardsContent[0].textP1, cardsContent[0].textP2, cardsContent[0].iconPath, cardsContent[0].likeText)
           //- +card(
           //-   cardsContent[1].title, 
           //-   cardsContent[1].imgSrc, 
