@@ -1,59 +1,46 @@
-doctype html
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width,initial-scale=1")
-    meta(name="color-scheme" content="dark light")
-    title Закрывающий тег
-    link(rel="stylesheet" href="./fonts/fonts.css")
-    link(href="./images/favicon.ico" sizes="any" rel="icon")
-    link(href="./images/favicon.svg" type="image/svg+xml" rel="icon")
-    link(rel="stylesheet" href="./blocks/styles/variables.css")
-    link(rel="stylesheet" href="./blocks/styles/globals.css")
-    link(rel="stylesheet" href="./blocks/styles/style.css")
-    link(rel="stylesheet" href="./blocks/styles/animations.css")
-    link(rel="stylesheet" href="./blocks/styles/themes.css")
-    link(rel="stylesheet" href="./index.css")
-    link(rel="stylesheet" href="./bundle.css")
-    script(src="./scripts/set-theme.js")
-  body.page
-    header.header.card
-      h1.header__title &lt;/HTML&gt;
-      p.header__subtitle закрывающий тег
-      nav.theme-menu.header__theme-menu
-        ul.theme-menu__list
-          li.theme-menu__item
-            button.theme-menu__button(type="button" data-theme="dark").
+extends ../layouts/default
 
-              Темно
-          li.theme-menu__item
-            button.theme-menu__button(type="button" data-theme="auto", disabled).
+block variables
+  - var title = "Закрывающий тег"
+  -
+    var cardsContent = [
+      {
+        "title": "Фритрек и нулевой спринт: Подготовка к работе", 
+        "imgSrc": "./images/image.png", 
+        "textP1": "Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.", 
+        "textP2": "Место для ваших воспоминаний о начале обучения.", 
+        "iconPath": "M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z", 
+        "likeText": "Like"
+      },
+      //- {
+      //-   "title": "Фритрек и нулевой спринт: Подготовка к работе", 
+      //-   "imgSrc": "./images/image.png", 
+      //-   "textP1": "Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.", 
+      //-   "textP2": "Место для ваших воспоминаний о начале обучения.", 
+      //-   "iconPath": "M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z", 
+      //-   "likeText": "Like"
+      //- },
+    ]
 
-              Авто
-          li.theme-menu__item
-            button.theme-menu__button(type="button" data-theme="light").
-
-              Светло
-    main.content
-      ul.card__list
+block content
+  main.content
+    include ../blocks/card/__list/card__list
+      block items
         li.list__item
-          article.card.list__article
-            h2.card__title.
-
-              Фритрек и нулевой спринт: Подготовка к работе
-            img.card__pic(alt="картинка" src="./images/image.png")
-            .card__text
-              p.
-
-                Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.
-              p Место для ваших воспоминаний о начале обучения.
-            .card__buttons
-              button.button.card__icon-button(type="button")
-                svg.like-icon(xmlns="http://www.w3.org/2000/svg" width="27" height="24" fill="none")
-                  path(d="M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z" fill="currentColor")
-              button.button.card__like-button(type="button")
-                span.button__text Like
-    footer.footer
-      svg(width="40" height="40" fill="currentColor")
-        use(href="#disk-icon")
-    script(src="./scripts/like.js")
+          include ../blocks/card/card
+          +card(
+            cardsContent[0].title, 
+            cardsContent[0].imgSrc, 
+            cardsContent[0].textP1, 
+            cardsContent[0].textP2, 
+            cardsContent[0].iconPath,
+            cardsContent[0].likeText
+          )
+          //- +card(
+          //-   cardsContent[1].title, 
+          //-   cardsContent[1].imgSrc, 
+          //-   cardsContent[1].textP1, 
+          //-   cardsContent[1].textP2, 
+          //-   cardsContent[1].iconPath,
+          //-   cardsContent[1].likeText
+          //- )
