@@ -1,10 +1,10 @@
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  background-color: var(--background-color, #000);
-  background-image: var(--background-cover), none;
-  background-size: cover;
-  font-family: var(--page-main-font, "Inter", sans-serif);
-  font-variation-settings: "wght" var(--page-main-weight, 400);
-  color: var(--text-color, #00cc14);
+	min-inline-size: 320px;
+	min-block-size: 100dvb;
+	background-color: var(--background-color, #000);
+	background-image: var(--background-cover), none;
+	background-size: cover;
+	font-family: var(--page-main-font, "Inter", sans-serif);
+	font-variation-settings: "wght" var(--page-main-weight, 400);
+	color: var(--text-color, #00cc14);
 }

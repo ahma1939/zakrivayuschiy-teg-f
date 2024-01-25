@@ -1,34 +1,34 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  /* colors  */
-  --green-color: #00cc14;
-  --white-color: #fff;
-  --black-color: #000;
+	/* colors  */
+	--green-color: #00cc14;
+	--white-color: #fff;
+	--black-color: #000;
 
-  /* text  */
-  --page-main-font: "Inter", sans-serif;
-  --page-second-font: "PressStart2P", sans-serif;
-  --page-main-weight: 400;
-  --page-header-weight: 785;
-  --page-text-weight: 465;
+	/* text  */
+	--page-main-font: "Inter", sans-serif;
+	--page-second-font: "PressStart2P", sans-serif;
+	--page-main-weight: 400;
+	--page-header-weight: 785;
+	--page-text-weight: 465;
 
-  /* text-color  */
-  --text-color: var(--green-color, #00cc14);
+	/* text-color  */
+	--text-color: var(--green-color, #00cc14);
 
-  /* background  */
-  --background-color: var(--black-color, #000);
-  --background-cover: repeating-linear-gradient(
-      to right,
-      var(--black-color, #000) 0 2px,
-      transparent 2px 4px
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      var(--black-color, #000) 0 2px,
-      transparent 2px 4px
-    ),
-    linear-gradient(to bottom, #007f0c, #004306);
+	/* background  */
+	--background-color: var(--black-color, #000);
+	--background-cover: repeating-linear-gradient(
+			to right,
+			var(--black-color, #000) 0 2px,
+			transparent 2px 4px
+		),
+		repeating-linear-gradient(
+			to bottom,
+			var(--black-color, #000) 0 2px,
+			transparent 2px 4px
+		),
+		linear-gradient(to bottom, #007f0c, #004306);
 
-  /* border */
-  --border-color: var(--green-color, #00cc14);
+	/* border */
+	--border-color: var(--green-color, #00cc14);
 }

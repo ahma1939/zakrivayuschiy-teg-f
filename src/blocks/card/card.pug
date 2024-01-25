@@ -1,18 +1,18 @@
 mixin card(title, imgSrc, textP1, textP2, iconPath, likeText)
-  article.card.list__article
-    h2.card__title= title
-    img.card__pic(alt="картинка", src=imgSrc)
-    .card__text
-      p= textP1
-      p= textP2
-    .card__buttons
-      button.button.card__icon-button(type="button")
-        svg.like-icon(
-          xmlns="http://www.w3.org/2000/svg",
-          width="27",
-          height="24",
-          fill="none"
-        )
-          path(d=iconPath, fill="currentColor")
-      button.button.card__like-button(type="button")
-        span.button__text= likeText
+	article.card.list__article
+		h2.card__title= title
+		img.card__pic(alt="картинка", src=imgSrc)
+		.card__text
+			p= textP1
+			p= textP2
+		.card__buttons
+			button.button.card__icon-button(type="button")
+				svg.like-icon(
+					xmlns="http://www.w3.org/2000/svg",
+					width="27",
+					height="24",
+					fill="none"
+				)
+					path(d=iconPath, fill="currentColor")
+			button.button.card__like-button(type="button")
+				span.button__text= likeText

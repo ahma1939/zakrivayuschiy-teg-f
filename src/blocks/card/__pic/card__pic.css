@@ -1,8 +1,8 @@
 .card__pic {
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  block-size: 100%;
-  inline-size: 100%;
-  border-block-end: 2px solid var(--border-color, #00cc14);
+	display: block;
+	object-fit: cover;
+	object-position: center;
+	block-size: 100%;
+	inline-size: 100%;
+	border-block-end: 2px solid var(--border-color, #00cc14);
 }
