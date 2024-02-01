@@ -3,4 +3,41 @@
 	margin-inline: auto;
 	border: 2px solid var(--border-color, #00cc14);
 	background: var(--background-color, #000);
+
+	&__buttons {
+		display: flex;
+		justify-content: flex-end;
+		gap: 6px;
+		margin: 25px;
+	}
+
+	&__icon-button {
+		border: none;
+	}
+
+	&__like-button {
+		padding: 9px 17px;
+	}
+
+	&__pic {
+		display: block;
+		object-fit: cover;
+		object-position: center;
+		block-size: 100%;
+		inline-size: 100%;
+		border-block-end: 2px solid var(--border-color, #00cc14);
+	}
+
+	&__text {
+		display: grid;
+		gap: 27px;
+		margin: 25px 30px 0 25px;
+	}
+
+	&__title {
+		font-size: 18px;
+		font-variation-settings: "wght" var(--page-header-weight, 785);
+		border-block-end: 2px solid var(--border-color, #00cc14);
+		padding: 4px 10px;
+	}
 }

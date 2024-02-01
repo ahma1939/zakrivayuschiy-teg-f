@@ -1,0 +1,31 @@
+.theme-menu {
+
+	&__list {
+		display: grid;
+		justify-content: center;
+		margin-block: 25px;
+		gap: 14px;
+	}
+
+	&__button {
+		font-size: 14px;
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		text-transform: uppercase;
+
+		&:hover {
+			opacity: 0.6;
+		}
+		
+		&:focus {
+			opacity: 0.6;
+		}
+		
+		/* .theme-menu__button:focus-visible {
+		}
+		
+		.theme-menu__button:active {
+		} */
+	}
+}

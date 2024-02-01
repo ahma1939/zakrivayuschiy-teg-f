@@ -6,4 +6,13 @@
 	align-items: center;
 	text-align: center;
 	text-transform: uppercase;
+
+	&__title {
+		margin-block: clamp(7.5rem, 7.145rem + 1.5075vw, 8.5rem) 20px;
+		font-size: clamp(3.0625rem, 2.7104rem + 1.5075vw, 4.0625rem);
+	}
+
+	&__subtitle {
+		font-size: clamp(0.875rem, 0.6771rem + 0.8451vw, 1.438rem);
+	}
 }
