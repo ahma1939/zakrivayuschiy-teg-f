@@ -83,7 +83,7 @@ function css() {
     mediaquery(),
     cssnano()
   ];
-  return gulp.src('src/**/*.css')
+  return gulp.src('src/blocks/**/*.css')
     .pipe(plumber())
     .pipe(concat('bundle.css'))
     .pipe(postcss(plugins))
