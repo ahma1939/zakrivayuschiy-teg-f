@@ -8,3 +8,27 @@
 	font-variation-settings: "wght" var(--page-main-weight, 400);
 	color: var(--text-color, #00cc14);
 }
+
+// Filters
+
+.pic-grayscale {
+	filter: grayscale(50%);
+}
+.pic-saturate {
+	filter: saturate(158%);
+}
+.pic-mix {
+	filter: sepia(1) contrast(2) brightness(200%);
+}
+.pic-invert {
+	filter: invert(0.7);
+}
+.pic-sepia {
+	filter: sepia(80%);
+}
+.pic-blur {
+	filter: blur(0.2rem);
+}
+.pic-hue-rotate {
+	filter: hue-rotate(-90deg);
+}

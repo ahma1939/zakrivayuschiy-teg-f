@@ -40,4 +40,9 @@
 		border-block-end: 2px solid var(--border-color, #00cc14);
 		padding: 4px 10px;
 	}
+
+	&__list {
+		display: grid;
+		gap: 50px;
+	}
 }
