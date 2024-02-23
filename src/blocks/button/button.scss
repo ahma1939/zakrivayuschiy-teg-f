@@ -3,4 +3,9 @@
 	border: 2px solid var(--border-color, #00cc14);
 	background: transparent;
 	font-size: 14px;
+	
+	&-save-icon {
+		block-size: 28px;
+		margin-block-end: 8px;
+	}
 }

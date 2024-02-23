@@ -3,6 +3,5 @@ DS_Store
 .vscode
 .DS_Store
 /src/.DS_Store
-src/components/.DS_Store
 src/.DS_Store
 dist
