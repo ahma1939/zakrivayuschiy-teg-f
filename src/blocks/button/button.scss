@@ -3,9 +3,19 @@
 	border: 2px solid var(--border-color, #00cc14);
 	background: transparent;
 	font-size: 14px;
+
+	&__save {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		min-inline-size: 306px;
+		padding: 15px 0;
+		background-color: var(--background-color, #000);
+	}
 	
-	&-save-icon {
+	&__save-icon {
 		block-size: 28px;
+		inline-size: 28px;
 		margin-block-end: 8px;
 	}
 }

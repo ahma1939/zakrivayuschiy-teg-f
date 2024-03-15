@@ -1,0 +1,42 @@
+.dialog {
+	position: fixed;
+	inset: 0;
+	font-family: var(--page-second-font, "PressStart2P", sans-serif);
+	border: 2px solid var(--border-color, #00cc14);
+	font-size: 14px;
+	background-color: var(--background-color, #000);
+	font-variation-settings: "wght" var(--page-main-weight, 400);
+	color: var(--text-color, #00cc14);
+	transition: opacity 0.3s ease-in-out;
+	text-transform: uppercase;
+	padding: 30px 40px;
+	max-inline-size: 341px;
+
+	&[open] {
+		display: grid;
+		grid-template-rows: repeat(2, min-content);
+	}
+
+	&__content {
+		display: grid;
+		gap: 30px;
+	}
+
+	&:not([open]) {
+		pointer-events: none;
+		opacity: 0;
+	}
+
+	&::backdrop {
+		background-color: rgb(0 0 0 / 75%);
+	}
+
+	&__icon {
+		block-size: 39px;
+		inline-size: 39px;
+	}
+
+	&__button {
+		inline-size: 100%;
+	}
+}
