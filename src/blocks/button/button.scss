@@ -7,6 +7,8 @@
 	&__save {
 		display: flex;
 		align-items: center;
+		justify-content: center;
+		gap: 8px;
 		flex-direction: column;
 		min-inline-size: 306px;
 		padding: 15px 0;
@@ -16,6 +18,11 @@
 	&__save-icon {
 		block-size: 28px;
 		inline-size: 28px;
-		margin-block-end: 8px;
+	}
+}
+
+@media (width > 375px) {
+	.button__save {
+		flex-direction: row;
 	}
 }

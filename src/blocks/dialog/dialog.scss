@@ -41,3 +41,10 @@
 		padding: 10.5px 12.5px;
 	}
 }
+
+@media (width > 375px) {
+	.dialog {
+		max-inline-size: 357px;
+		padding: 28px 30px;
+	}
+}
