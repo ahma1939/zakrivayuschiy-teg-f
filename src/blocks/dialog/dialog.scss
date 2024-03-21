@@ -1,5 +1,4 @@
 .dialog {
-	position: fixed;
 	inset: 0;
 	font-family: var(--page-second-font, "PressStart2P", sans-serif);
 	border: 2px solid var(--border-color, #00cc14);
@@ -11,15 +10,15 @@
 	text-transform: uppercase;
 	padding: 30px 40px;
 	max-inline-size: 341px;
-
-	&[open] {
-		display: grid;
-		grid-template-rows: repeat(2, min-content);
-	}
+	display: grid;
+	grid-template-rows: repeat(2, min-content);
+	gap: 30px;
 
 	&__content {
 		display: grid;
-		gap: 30px;
+		grid-template-columns: 0fr 1fr;
+		gap: 20px;
+		line-height: 21px;
 	}
 
 	&:not([open]) {
@@ -34,9 +33,11 @@
 	&__icon {
 		block-size: 39px;
 		inline-size: 39px;
+		align-self: center;
 	}
 
 	&__button {
 		inline-size: 100%;
+		padding: 10.5px 12.5px;
 	}
 }

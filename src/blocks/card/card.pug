@@ -1,8 +1,8 @@
 mixin card(title, imgSrc, textP1, textP2, iconPath, likeText, index)
 	article.card.list__article
 		h2.card__title= title
-		- var classes = ["pic-grayscale", "pic-saturate", "pic-mix", "pic-invert", "pic-sepia", "pic-blur", "pic-hue-rotate"]
-		img.card__pic(alt="картинка", src=imgSrc, class=classes[(index-1) % classes.length])
+		- var classes = ["pic-grayscale", "pic-saturate", "pic-mix", "pic-invert", "pic-sepia", "pic-blur", "pic-hue-rotate"];
+		img.card__pic(alt="картинка", src=imgSrc, class=classes[(index - 1) % classes.length])
 		.card__text
 			p= textP1
 			p= textP2

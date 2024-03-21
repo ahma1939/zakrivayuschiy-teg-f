@@ -1,6 +1,9 @@
 footer.footer
-	button.button.button__save(type="button" onclick="window['dialog'].showModal()" aria-controls="dialog")
-
+	button.button.button__save(
+		type="button",
+		onclick="window['dialog'].showModal()",
+		aria-controls="dialog"
+	)
 		svg.button__save-icon(viewBox="0 0 29 28")
 			use(href="svg/floppy.svg#floppy")
-		span.button__text="Сохранить на память"
+		span.button__text= "Сохранить на память"
