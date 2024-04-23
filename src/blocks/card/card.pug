@@ -1,23 +1,29 @@
-mixin card(title, imgSrc, textP1, textP2, iconPath, likeText, index)
+mixin card(title, imgSrc, textP1, textP2, iconPath1, iconPath2, iconPath3, iconPath4, likeText, index)
 	article.card.list__article
 		h2.card__title= title
-		- var classes = ["pic-grayscale", "pic-saturate", "pic-mix", "pic-invert", "pic-sepia", "pic-blur", "pic-hue-rotate"];
-		img.card__pic(
-			alt="картинка",
-			src=imgSrc,
-			class=classes[(index - 1) % classes.length]
-		)
+		.cover
+			- var classes = ["pic-grayscale", "pic-saturate", "pic-mix", "pic-invert", "pic-sepia", "pic-blur", "pic-hue-rotate"];
+				span.card__water-mark &lt;/HTML&gt;
+				img.card__pic(
+					alt="картинка",
+					src=imgSrc,
+					class=classes[(index - 1) % classes.length]
+				)
 		.card__text
 			p= textP1
 			p= textP2
 		.card__buttons
-			button.button.card__icon-button(type="button")
+			button.card__icon-button(type="button")
 				svg.like-icon(
 					xmlns="http://www.w3.org/2000/svg",
 					width="27",
-					height="24",
-					fill="none"
+					height="24"
 				)
-					path(d=iconPath, fill="currentColor")
+					g.heart
+						path.contour(d=iconPath1, fill="none")
+						path.main-body(d=iconPath2, fill="none")
+						path.core(d=iconPath3, fill="none")
+					path.sparks(d=iconPath4, fill="none")
+
 			button.button.card__like-button(type="button")
 				span.button__text= likeText

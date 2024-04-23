@@ -31,4 +31,8 @@
 
 	/* border */
 	--border-color: var(--green-color, #00cc14);
+
+	/* transforms */
+		--timing: 0.3s;
+		--transition: ease;
 }

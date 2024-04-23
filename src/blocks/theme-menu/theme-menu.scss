@@ -7,13 +7,23 @@
 	}
 
 	&__button {
-		font-size: 14px;
 		border: none;
 		background: transparent;
-		cursor: pointer;
 		text-transform: uppercase;
+		position: relative;
+		cursor: pointer;
 
-		&:active {
+		&:disabled {
+			cursor: default;
+			opacity: 0.6;
+		}
+
+		&:disabled::before {
+			animation: triangle 0.5s ease-in-out infinite alternate;
+			color: var(--theme-light-accent-transparent);
+			content: "▶";
+			inset-inline-start: -20px;
+			position: absolute;
 			opacity: 0.6;
 		}
 
@@ -23,13 +33,7 @@
 
 		&:focus {
 			opacity: 0.6;
-			text-decoration: underline;
+			outline: none;
 		}
-
-		/* .theme-menu__button:focus-visible {
-		}
-		
-		.theme-menu__button:active {
-		} */
 	}
 }

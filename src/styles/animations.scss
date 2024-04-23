@@ -12,3 +12,19 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes triangle {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(4px);
+  }
+}
+
+@keyframes scaling {
+  100% {
+    transform: scale(1.5);
+    transform-origin: center;
+  }
+}

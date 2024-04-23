@@ -1,8 +1,26 @@
 .button {
 	font-family: var(--page-second-font, "PressStart2P", sans-serif);
 	border: 2px solid var(--border-color, #00cc14);
-	background: transparent;
 	font-size: 14px;
+	cursor: pointer;
+	position: relative;
+	transition: var(--timing, 0.3s);
+	transition-timing-function: var(--transition, ease);
+
+	&::before {
+		background-color: var(--green-color, #00cc14);
+		content: "";
+		position: absolute;
+		inset: 0;
+		transition: transform 0.5s ease-in-out;
+		transform: scaleX(0);
+		transform-origin: left;
+		z-index: 1;
+	}
+
+	&:hover::before {
+		transform: scaleX(1);
+	}
 
 	&__save {
 		display: flex;
@@ -18,6 +36,15 @@
 	&__save-icon {
 		block-size: 28px;
 		inline-size: 28px;
+		position: relative;
+		z-index: 2;
+		mix-blend-mode: difference;
+	}
+
+	&__text {
+		position: relative;
+		z-index: 2;
+		mix-blend-mode: difference;
 	}
 }
 

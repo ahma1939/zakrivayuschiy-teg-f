@@ -10,10 +10,20 @@
 	}
 
 	&__icon-button {
+		background-color: transparent;
 		border: none;
+		align-self: end;
+
+		position: relative;
+		border: none;
+		transition: outline var(--timing, 0.3s);
+		transition-timing-function: var(--transition, ease);
+		cursor: pointer;
+		inline-size: 43px;
 	}
 
 	&__like-button {
+		background-color: transparent;
 		padding: 9px 17px;
 	}
 
@@ -42,5 +52,18 @@
 	&__list {
 		display: grid;
 		gap: 50px;
+	}
+
+	&__water-mark {
+		position: absolute;
+		z-index: 1;
+		opacity: 0.5;
+		color: var(--text-color, #000000);
+		font-family: var(--page-second-font, "PressStart2P", sans-serif);
+		font-size: 14px;
+		line-height: normal;
+		text-transform: uppercase;
+		right: 13px;
+		top: 24px;
 	}
 }
