@@ -2,12 +2,13 @@ mixin card(title, imgSrc, textP1, textP2, iconPath1, iconPath2, iconPath3, iconP
 	article.card.list__article
 		h2.card__title= title
 		.cover
+			- var alts = ["подготовка", "начало", "сомнения", "подход", "поддержка", "решения", "трудности", "готовность"]
 			- var classes = ["pic-grayscale", "pic-saturate", "pic-mix", "pic-invert", "pic-sepia", "pic-blur", "pic-hue-rotate"];
 				span.card__water-mark &lt;/HTML&gt;
 				img.card__pic(
-					alt="картинка",
+					alt=alts[(index -1) % alts.length]
 					src=imgSrc,
-					class=classes[(index - 1) % classes.length]
+					class=classes[(index -1) % classes.length]
 				)
 		.card__text
 			p= textP1

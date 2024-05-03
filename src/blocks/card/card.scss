@@ -31,7 +31,7 @@
 		display: block;
 		object-fit: cover;
 		object-position: center;
-		block-size: 100%;
+		aspect-ratio: 1/1;
 		inline-size: 100%;
 		border-block-end: 2px solid var(--border-color, #00cc14);
 	}
