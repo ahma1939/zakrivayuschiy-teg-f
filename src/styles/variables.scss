@@ -33,6 +33,22 @@
 	--border-color: var(--green-color, #00cc14);
 
 	/* transforms */
-		--timing: 0.3s;
-		--transition: ease;
+	--timing: 0.3s;
+	--transition: ease;
+
+	/* like-icon */
+		/*contour*/
+	--contr-color: var(--green-color, #00cc14);
+	--contr-anim-color: #f00;
+		/*main-body*/
+	--main-body-color: rgb(0, 204, 20);
+	--main-body-full-color: rgb(0, 204, 0);
+	--main-body-anim-color: #f00;
+		/*core*/
+	--core-color: rgb(0, 204, 20);
+	--core-full-color: rgb(0, 204, 20, 0);
+	--core-anim-color: #f00;
+		/*sparks*/
+	--sparks-anim-color: #f00;
+	--sparks-full-color: rgb(255, 0, 0, 0);
 }

@@ -28,3 +28,30 @@
     transform-origin: center;
   }
 }
+
+@keyframes icon-scale {
+	100% {
+		transform: scale(1.5);
+		transform-origin: center;
+	}
+}
+@keyframes contour-color {
+	100% {
+		fill: var(--contr-anim-color);
+	}
+}
+@keyframes main-body-color {
+	100% {
+		fill: var(--main-body-anim-color);
+	}
+}
+@keyframes core-color {
+	100% {
+		fill: var(--core-anim-color);
+	}
+}
+@keyframes sparks-color {
+	100% {
+		fill: var(--sparks-anim-color);
+	}
+}

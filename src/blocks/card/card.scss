@@ -11,15 +11,22 @@
 
 	&__icon-button {
 		background-color: transparent;
-		border: none;
-		align-self: end;
-
+		align-items: center;
+		display: grid;
 		position: relative;
-		border: none;
+		border: 2px solid transparent;
 		transition: outline var(--timing, 0.3s);
 		transition-timing-function: var(--transition, ease);
 		cursor: pointer;
 		inline-size: 43px;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:focus-visible {
+			border-color: var(--green-color);
+		}
 	}
 
 	&__like-button {
@@ -58,7 +65,7 @@
 		position: absolute;
 		z-index: 1;
 		opacity: 0.5;
-		color: var(--text-color, #000000);
+		color: var(--text-color, #000);
 		font-family: var(--page-second-font, "PressStart2P", sans-serif);
 		font-size: 14px;
 		line-height: normal;

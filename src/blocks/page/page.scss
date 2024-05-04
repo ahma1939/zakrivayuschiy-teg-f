@@ -11,6 +11,41 @@
 	margin-inline: auto;
 }
 
+.like-icon {
+	position: absolute;
+		.contour {
+			fill: var(--contr-color);
+		}
+		.main-body {
+			fill: var(--main-body-color);
+		}
+		.core {
+			fill: var(--main-core-color);
+		}
+		.sparks {
+			fill: var(--sparks-full-color);
+		}
+}
+
+.like-icon.is-liked {
+	animation: icon-scale 0.3s 0.1s ease-in reverse;
+		.contour {
+			animation: contour-color 0.3s 0.06s linear;
+			animation-fill-mode: forwards;
+		}
+		.main-body {
+			animation: main-body-color 0.3s 0.05s linear;
+			animation-fill-mode: forwards;		
+		}
+		.core {
+			animation: core-color 0.3s linear;
+			animation-fill-mode: forwards;		
+		}
+		.sparks {
+			animation: sparks-color 0.3s 0.03s ease-in reverse;
+		}
+}
+
 .cover {
 	position: relative;
 }
@@ -22,7 +57,7 @@
 }
 
 .pic-saturate {
-	filter: saturate(158%);
+	filter: saturate(50%);
 }
 
 .pic-mix {
@@ -30,7 +65,7 @@
 }
 
 .pic-invert {
-	filter: invert(0.7);
+	filter: invert(0.4);
 }
 
 .pic-sepia {
@@ -38,7 +73,7 @@
 }
 
 .pic-blur {
-	filter: blur(0.2rem);
+	filter: blur(0.15rem);
 }
 
 .pic-hue-rotate {
