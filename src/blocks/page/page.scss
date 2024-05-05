@@ -4,50 +4,59 @@
 	background-color: var(--background-color, #000);
 	background-image: var(--background-cover), none;
 	background-size: cover;
+	background-attachment: fixed;
 	font-family: var(--page-main-font, "Inter", sans-serif);
-	font-variation-settings: "wght" var(--page-main-weight, 400);
+	font-variation-settings:'wght' var(--page-main-weight);
 	color: var(--text-color, #00cc14);
 	max-inline-size: 696px;
 	margin-inline: auto;
 }
 
+.content {
+	display: grid;
+	justify-items: center;
+	gap: 50px;
+	padding-block-end: 100px;
+}
+
 .like-icon {
 	position: absolute;
-		.contour {
-			fill: var(--contr-color);
-		}
-		.main-body {
-			fill: var(--main-body-color);
-		}
-		.core {
-			fill: var(--main-core-color);
-		}
-		.sparks {
-			fill: var(--sparks-full-color);
-		}
+	.contour {
+		fill: var(--contr-color);
+	}
+	.main-body {
+		fill: var(--main-body-full-color);
+	}
+	.core {
+		fill: var(--core-full-color);
+	}
+	.sparks {
+		fill: var(--sparks-full-color);
+	}
 }
 
 .like-icon.is-liked {
-	animation: icon-scale 0.3s 0.1s ease-in reverse;
-		.contour {
-			animation: contour-color 0.3s 0.06s linear;
-			animation-fill-mode: forwards;
-		}
-		.main-body {
-			animation: main-body-color 0.3s 0.05s linear;
-			animation-fill-mode: forwards;		
-		}
-		.core {
-			animation: core-color 0.3s linear;
-			animation-fill-mode: forwards;		
-		}
-		.sparks {
-			animation: sparks-color 0.3s 0.03s ease-in reverse;
-		}
+	animation: icon-scale 0.3s 0.01s ease-in reverse;
+	.core {
+		animation: core-color 0.3s linear;
+		animation-fill-mode: forwards;
+	}
+	.main-body {
+		animation: main-body-color 0.3s 0.05s linear;
+		animation-fill-mode: forwards;
+	}
+	.contour {
+		animation: contour-color 0.3s 0.06s linear;
+		animation-fill-mode: forwards;
+	}
+	.sparks {
+		animation: sparks-color 0.3s 0.03s ease-in reverse;
+	}
 }
 
 .cover {
 	position: relative;
+	border-bottom: 2px solid var(--border-color, #00cc14);
 }
 
 // Filters

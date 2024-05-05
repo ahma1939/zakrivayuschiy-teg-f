@@ -7,48 +7,45 @@
 
 	/* text  */
 	--page-main-font: "Inter", sans-serif;
-	--page-second-font: "PressStart2P", sans-serif;
-	--page-main-weight: 400;
-	--page-header-weight: 785;
-	--page-text-weight: 465;
+	--page-second-font: "PressStart2P", fantasy;
+	--page-main-weight: 465;
+	--page-second-weight: 785;
 
 	/* text-color  */
-	--text-color: var(--green-color, #00cc14);
+	--text-color: #00cc14;
 
 	/* background  */
-	--background-color: var(--black-color, #000);
+	--background-color: #000;
 	--background-cover: repeating-linear-gradient(
 			to right,
-			var(--black-color, #000) 0 2px,
+			#000 0 2px,
 			transparent 2px 4px
 		),
-		repeating-linear-gradient(
-			to bottom,
-			var(--black-color, #000) 0 2px,
-			transparent 2px 4px
-		),
+		repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
 		linear-gradient(to bottom, #007f0c, #004306);
 
 	/* border */
-	--border-color: var(--green-color, #00cc14);
+	--border-color: #00cc14;
 
 	/* transforms */
-	--timing: 0.3s;
-	--transition: ease;
+	// --timing: 0.3s;
+	// --transition: ease;
+	--button-scale-color: #00cc14;
+	--btn-text-color: #00cc14;
 
 	/* like-icon */
-		/*contour*/
-	--contr-color: var(--green-color, #00cc14);
+	/*contour*/
+	--contr-color: #00cc14;
 	--contr-anim-color: #f00;
-		/*main-body*/
-	--main-body-color: rgb(0, 204, 20);
-	--main-body-full-color: rgb(0, 204, 0);
+	/*main-body*/
+	--main-body-color: rgb(0 204 20);
+	--main-body-full-color: rgb(0, 204, 20, 0);
 	--main-body-anim-color: #f00;
-		/*core*/
-	--core-color: rgb(0, 204, 20);
+	/*core*/
+	--core-color: rgb(0 204 20);
 	--core-full-color: rgb(0, 204, 20, 0);
 	--core-anim-color: #f00;
-		/*sparks*/
+	/*sparks*/
 	--sparks-anim-color: #f00;
 	--sparks-full-color: rgb(255, 0, 0, 0);
 }

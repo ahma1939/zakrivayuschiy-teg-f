@@ -1,11 +1,12 @@
 .header {
-	font-family: var(--page-second-font, "PressStart2P", sans-serif);
+	font-family: var(--page-second-font, "PressStart2P", fantasy);
 	margin-block: 100px;
 	display: grid;
 	justify-content: center;
-	align-items: center;
-	text-align: center;
+	justify-items: center;
 	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
 
 	&__title {
 		margin-block: clamp(7.5rem, 7.145rem + 1.5075vw, 8.5rem) 20px;

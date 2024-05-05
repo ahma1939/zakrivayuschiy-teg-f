@@ -4,7 +4,10 @@ mixin card(title, imgSrc, textP1, textP2, iconPath1, iconPath2, iconPath3, iconP
 		.cover
 			- var alts = ["подготовка", "начало", "сомнения", "подход", "поддержка", "решения", "трудности", "готовность"]
 			- var classes = ["pic-grayscale", "pic-saturate", "pic-mix", "pic-invert", "pic-sepia", "pic-blur", "pic-hue-rotate"];
-				span.card__water-mark &lt;/HTML&gt;
+			- var watermarks = ["pic-grayscale", "pic-saturate", "pic-mix", "pic-invert", "pic-sepia", "pic-blur", "pic-hue-rotate"];
+			- var watermarks = ["</HTML>", "</HTML>", "<CSS>", "<desigions>", "care", "<support>", "<life-style: none>", "<experience>"];
+
+				span.card__water-mark= watermarks[(index % watermarks.length)]
 				img.card__pic(
 					alt=alts[(index -1) % alts.length]
 					src=imgSrc,

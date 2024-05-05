@@ -1,30 +1,42 @@
 .theme-menu {
+	margin-block: 25px;
+
 	&__list {
 		display: grid;
-		justify-content: center;
-		margin-block: 25px;
-		gap: 14px;
+		gap: 8px;
+		padding-inline-start: 20px;
 	}
 
 	&__button {
-		border: none;
-		background: transparent;
-		text-transform: uppercase;
 		position: relative;
+		border: none;
+		font-size: 14px;
+		text-transform: uppercase;
+		background: transparent;
+		transition: opacity 0.3s ease;
 		cursor: pointer;
+		appearance: none;
+		// border: none;
+		// background: transparent;
+		// text-transform: uppercase;
+		// position: relative;
+		// cursor: pointer;
+		// appearance: none;
+		// transition: opacity 0.3s ease;
+		// padding: 0;
 
 		&:disabled {
 			cursor: default;
 			opacity: 0.6;
+			pointer-events: none;
 		}
 
 		&:disabled::before {
 			animation: triangle 0.5s ease-in-out infinite alternate;
-			color: var(--theme-light-accent-transparent);
 			content: "▶";
 			inset-inline-start: -20px;
 			position: absolute;
-			opacity: 0.6;
+			inset-block-start: 0px;
 		}
 
 		&:hover {
@@ -34,6 +46,21 @@
 		&:focus {
 			opacity: 0.6;
 			outline: none;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			background: currentColor;
+			inline-size: 100%;
+			block-size: 2px;
+			transition: transform 0.3s ease;
+			transform: scaleX(0);
+			transform-origin: left;
+		}
+
+		&:focus-visible::after {
+			transform: scaleX(1);
 		}
 	}
 }

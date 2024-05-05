@@ -1,5 +1,6 @@
 .button {
-	font-family: var(--page-second-font, "PressStart2P", sans-serif);
+	font-family: var(--page-second-font, "PressStart2P", fantasy);
+	font-weight: 400;
 	border: 2px solid var(--border-color, #00cc14);
 	font-size: 14px;
 	cursor: pointer;
@@ -8,7 +9,7 @@
 	transition-timing-function: var(--transition, ease);
 
 	&::before {
-		background-color: var(--green-color, #00cc14);
+		background-color: var(--button-scale-color);
 		content: "";
 		position: absolute;
 		inset: 0;
@@ -28,12 +29,20 @@
 		justify-content: center;
 		gap: 8px;
 		flex-direction: column;
-		min-inline-size: 306px;
-		padding: 15px 0;
+		padding: 15px 20px;
 		background-color: var(--background-color, #000);
+		
+		&:focus {
+			outline: none;
+		}
+
+		&:focus-visible {
+			box-shadow: 2px 2px 0 2px currentColor;
+		}
 	}
 
 	&__save-icon {
+		color: var(--btn-text-color);
 		block-size: 28px;
 		inline-size: 28px;
 		position: relative;
@@ -42,6 +51,7 @@
 	}
 
 	&__text {
+		color: var(--btn-text-color);
 		position: relative;
 		z-index: 2;
 		mix-blend-mode: difference;
