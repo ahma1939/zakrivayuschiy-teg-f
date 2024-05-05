@@ -27,3 +27,7 @@
 **Figma**
 
 - [Ссылка на макет в Figma](https://www.figma.com/file/JQhPLs2COLIeZtAtlsBS34/%238-%3C%2Fзакрывающий-тег%3E?type=design&node-id=801-1208&mode=design&t=3VdEcS6cFuMxATo6-0)
+
+**Установка**
+- установить node.js
+- открыть терминал и ввести команду npm i.
