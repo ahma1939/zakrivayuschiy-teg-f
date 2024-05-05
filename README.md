@@ -18,7 +18,7 @@
 - Animations
 - Transform
 
-* Репозиторий проекта: https://github.com/ahma1939/zakrivayuschiy-teg-f/tree/work	
+* Репозиторий проекта: https://github.com/ahma1939/zakrivayuschiy-teg-f.git	
 
 **GitHub Pages**
 

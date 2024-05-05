@@ -43,7 +43,8 @@
 
 	&__like-button {
 		background-color: transparent;
-		padding: 10px 36px;
+		padding: 10px 0;
+		inline-size: 130px;
 
 		&:focus {
 			outline: none;
