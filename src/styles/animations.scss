@@ -14,19 +14,19 @@
 */
 
 @keyframes triangle {
-  from {
-    transform: translate(0);
-  }
-  to {
-    transform: translate(4px);
-  }
+	from {
+		transform: translate(0);
+	}
+	to {
+		transform: translate(4px);
+	}
 }
 
 @keyframes scaling {
-  100% {
-    transform: scale(1.5);
-    transform-origin: center;
-  }
+	100% {
+		transform: scale(1.5);
+		transform-origin: center;
+	}
 }
 
 @keyframes icon-scale {
@@ -53,5 +53,69 @@
 @keyframes sparks-color {
 	100% {
 		fill: var(--sparks-anim-color);
+	}
+}
+
+.like-icon {
+	position: absolute;
+	.contour {
+		fill: var(--contr-color);
+		transition: fill 0.1s linear;
+	}
+	.main-body {
+		fill: var(--main-body-full-color);
+		transition: fill 0.3s linear;
+	}
+	.core {
+		fill: var(--core-full-color);
+		transition: fill 0.3s 0.03s linear;
+	}
+	.sparks {
+		fill: var(--sparks-full-color);
+	}
+}
+
+.like-icon.is-liked {
+	animation: icon-scale 0.3s 0.01s ease-in alternate;
+	.core {
+		animation: core-color 0.3s linear;
+		animation-fill-mode: forwards;
+	}
+	.main-body {
+		animation: main-body-color 0.3s 0.05s linear;
+		animation-fill-mode: forwards;
+	}
+	.contour {
+		animation: contour-color 0.3s 0.06s linear;
+		animation-fill-mode: forwards;
+	}
+	.sparks {
+		animation: sparks-color 0.3s 0.03s ease-in alternate;
+	}
+}
+
+.card__icon-button:hover {
+	.like-icon {
+		.main-body {
+			fill: var(--main-body-color);
+			transition: fill 0.3s 0.05s linear;
+		}
+		.core {
+			fill: var(--core-color);
+			transition: fill 0.3s linear;
+		}
+	}
+}
+
+.card__icon-button:active {
+	.like-icon {
+		.main-body {
+			fill: var(--main-body-anim-color);
+			transition: fill 0.3s 0.05s linear;
+		}
+		.core {
+			fill: var(--core-anim-color);
+			transition: fill 0.3s linear;
+		}
 	}
 }

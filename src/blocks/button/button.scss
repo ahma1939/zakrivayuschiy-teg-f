@@ -37,7 +37,7 @@
 		}
 
 		&:focus-visible {
-			box-shadow: 2px 2px 0 2px currentColor;
+			box-shadow: 2px 2px currentColor;
 		}
 	}
 
@@ -59,6 +59,10 @@
 }
 
 @media (width > 375px) {
+	.button__save-icon {
+		block-size: 21px;
+		inline-size: 21px;
+	}
 	.button__save {
 		flex-direction: row;
 	}

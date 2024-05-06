@@ -19,41 +19,6 @@
 	padding-block-end: 100px;
 }
 
-.like-icon {
-	position: absolute;
-	.contour {
-		fill: var(--contr-color);
-	}
-	.main-body {
-		fill: var(--main-body-full-color);
-	}
-	.core {
-		fill: var(--core-full-color);
-	}
-	.sparks {
-		fill: var(--sparks-full-color);
-	}
-}
-
-.like-icon.is-liked {
-	animation: icon-scale 0.3s 0.01s ease-in reverse;
-	.core {
-		animation: core-color 0.3s linear;
-		animation-fill-mode: forwards;
-	}
-	.main-body {
-		animation: main-body-color 0.3s 0.05s linear;
-		animation-fill-mode: forwards;
-	}
-	.contour {
-		animation: contour-color 0.3s 0.06s linear;
-		animation-fill-mode: forwards;
-	}
-	.sparks {
-		animation: sparks-color 0.3s 0.03s ease-in reverse;
-	}
-}
-
 .cover {
 	position: relative;
 	border-bottom: 2px solid var(--border-color, #00cc14);

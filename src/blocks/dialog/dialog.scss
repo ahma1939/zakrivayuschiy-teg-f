@@ -39,13 +39,14 @@
 		background-color: transparent;
 		inline-size: 100%;
 		padding: 10.5px 12.5px;
+		text-transform: uppercase;
 
 		&:focus {
 			outline: none;
 		}
 
 		&:focus-visible {
-			box-shadow: 2px 2px 0 2px currentColor;
+			box-shadow: 2px 2px currentColor;
 		}
 	}
 }

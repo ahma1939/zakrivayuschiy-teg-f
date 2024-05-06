@@ -10,7 +10,9 @@
 	}
 
 	&__icon-button {
-		display: grid;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
 		border: 2px solid transparent;
 		padding: 0;
 		background: transparent;
@@ -26,19 +28,6 @@
 		&:focus-visible {
 			border-color: currentColor;
 		}
-
-		&:hover {
-			.like-icon {
-				.main-body {
-					fill: var(--main-body-color);
-					transition: fill 0.3s 0.05s linear;
-				}
-				.core {
-					fill: var(--core-color);
-					transition: fill 0.3s linear;
-				}
-			}
-		}
 	}
 
 	&__like-button {
@@ -51,7 +40,7 @@
 		}
 
 		&:focus-visible {
-			box-shadow: 2px 2px 0 2px currentColor;
+			box-shadow: 2px 2px currentColor;
 		}
 	}
 
@@ -103,6 +92,11 @@
 @media (width > 375px) {
 	.card__text {
 		margin: 30px 30px 0 25px;
+	}
+
+	.card__water-mark {
+		right: 23px;
+		top: 26px;
 	}
 }
 

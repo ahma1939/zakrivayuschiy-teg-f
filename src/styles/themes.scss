@@ -55,6 +55,12 @@
 		),
 		linear-gradient(to bottom, #007f0c, #004306);
 
+		/* border */
+	--border-color: #00cc14;
+
+	/* transform */
+	--button-scale-color: #00cc14;
+
 	/* like-icon */
 	/*contour*/
 	--contr-color: #00cc14;
@@ -91,14 +97,14 @@
 			linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 
 		/* border */
-		--border-color: var(--black-color, #000);
+		--border-color: #000;
 
 		/* transform */
 		--button-scale-color: #000;
 		--btn-text-color: #fff;
 
-		--contr-color: rgb(0, 204, 0, 0);
-		--main-body-color: rgb(0, 204, 0, 0);
-		--core-color: rgb(0, 204, 0, 0);
+		--contr-color: #000;
+		--main-body-color: #000;
+		--core-color: #000;
 	}
 }
